@@ -10,6 +10,24 @@ interface Body {
   initialState?: Record<string, unknown>;
 }
 
+/**
+ * Optional: attach specific shares/databases to every embed session, so a
+ * read-only service account can serve a dive whose data lives behind a share.
+ * Set EMBED_REQUIRED_RESOURCES to a JSON array, e.g.
+ *   [{"url":"md:_share/foo/<uuid>","alias":"my_db"}]
+ */
+function envRequiredResources(): { url: string; alias: string }[] | undefined {
+  const raw = process.env.EMBED_REQUIRED_RESOURCES;
+  if (!raw) return undefined;
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) && parsed.length ? parsed : undefined;
+  } catch {
+    console.warn("[embed-session] EMBED_REQUIRED_RESOURCES is not valid JSON — ignoring.");
+    return undefined;
+  }
+}
+
 export async function POST(request: NextRequest) {
   let body: Body;
   try {
@@ -36,6 +54,7 @@ export async function POST(request: NextRequest) {
     const session = await createEmbedSession(body.diveId, {
       version: body.version,
       initialState: body.initialState,
+      requiredResources: envRequiredResources(),
     });
     return NextResponse.json({ session });
   } catch (e) {
