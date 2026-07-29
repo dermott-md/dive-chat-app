@@ -3,7 +3,7 @@ import "./globals.css";
 import { NavBar } from "./components/NavBar";
 
 export const metadata: Metadata = {
-  title: "Pack Power — powered by MotherDuck",
+  title: "Data Portal — powered by MotherDuck",
   description: "Explore dives, chat with your data, and build reports from natural language.",
 };
 

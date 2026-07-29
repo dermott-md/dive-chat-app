@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Compass, Sparkles, BookMarked } from "lucide-react";
 
-const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "Pack Power";
+const APP_NAME = process.env.NEXT_PUBLIC_APP_NAME || "Data Portal";
 
 const LINKS = [
   { href: "/", label: "Explore", icon: Compass },

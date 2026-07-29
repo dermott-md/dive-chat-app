@@ -12,11 +12,10 @@ Clone it, add two keys and one dive ID, and deploy to Vercel.
 > **⚡ Want Claude to set it up for you?** Open this folder in Claude Code and say
 > *"Set up this app for me by following SETUP_WITH_CLAUDE.md."* See [SETUP_WITH_CLAUDE.md](./SETUP_WITH_CLAUDE.md).
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYOUR_ORG%2Fdive-starter-kit&env=ANTHROPIC_API_KEY,MOTHERDUCK_TOKEN,MD_SERVICE_ACCOUNT_USERNAME,NEXT_PUBLIC_EXPLORE_DIVE_ID&envDescription=Claude%20key%2C%20MotherDuck%20service-account%20token%20%2B%20username%2C%20and%20the%20Dive%20ID%20to%20show&envLink=https%3A%2F%2Fgithub.com%2FYOUR_ORG%2Fdive-starter-kit%23the-four-values-in-envlocal&project-name=dive-starter-kit&repository-name=dive-starter-kit)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdermott-md%2Fdive-chat-app&env=ANTHROPIC_API_KEY,MOTHERDUCK_TOKEN,MD_SERVICE_ACCOUNT_USERNAME,NEXT_PUBLIC_EXPLORE_DIVE_ID&envDescription=Claude%20key%2C%20MotherDuck%20service-account%20token%20%2B%20username%2C%20and%20the%20Dive%20ID%20to%20show&envLink=https%3A%2F%2Fgithub.com%2Fdermott-md%2Fdive-chat-app%23the-four-values-in-envlocal&project-name=dive-chat-app&repository-name=dive-chat-app)
 
-> **Before the button works:** push this repo to GitHub (or GitLab/Bitbucket), then replace
-> `YOUR_ORG` in the two `github.com/YOUR_ORG/dive-starter-kit` URLs above with your repo path.
-> Vercel will prompt for the four environment variables on deploy.
+> The Deploy button clones this repo to your own Vercel account and prompts for the four
+> environment variables. You can also just `git clone` it and run locally (see below).
 
 ---
 
