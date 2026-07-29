@@ -6,15 +6,18 @@ is written so **Claude can set it up for you** — you barely have to touch a te
 
 ## How to use this
 
-1. Open this folder in **Claude Code** (or Claude Desktop with filesystem + the MotherDuck MCP
-   connected). The fastest path is `claude` in this directory.
-2. Tell Claude:
+1. Open **[Claude Code](https://claude.com/code)** in any empty folder (run `claude`), and make
+   sure the **MotherDuck MCP server** is connected to your MotherDuck account.
+2. Paste this to Claude:
 
-   > **"Set up this app for me by following SETUP_WITH_CLAUDE.md. Walk me through anything only
-   > I can do, and do the rest yourself."**
+   > **"Clone https://github.com/dermott-md/dive-chat-app and set it up for me by following its
+   > SETUP_WITH_CLAUDE.md. Walk me through anything only I can do, and do the rest yourself."**
 
 3. Answer Claude's questions when it asks (which dive to show, your API key, etc.). Claude does
    the rest.
+
+> Already have the repo cloned and open? Just say *"Set up this app by following
+> SETUP_WITH_CLAUDE.md"* — skip the clone.
 
 ### What you'll need
 - A **MotherDuck account on the Business plan** (required to embed Dives).
@@ -40,9 +43,11 @@ service-account token in the UI, and providing their Anthropic key).
   not, give the user the exact SQL to run in the MotherDuck web UI and continue from their result.
 - Verify each phase before moving on. If something fails, diagnose and fix before continuing.
 
-### Phase 1 — Install
-Run `npm install` in this directory. (Node is required; if `npm` isn't found, the user may manage
-Node via `fnm`/`nvm` — help them activate it.)
+### Phase 1 — Get the code & install
+If this repo isn't already cloned locally, clone it and `cd` into it:
+`git clone https://github.com/dermott-md/dive-chat-app && cd dive-chat-app`
+Then run `npm install`. (Node 18+ is required; if `npm` isn't found, the user may manage Node via
+`fnm`/`nvm` — help them activate it.)
 
 ### Phase 2 — Pick the dive for the Explore page
 - If you have the MCP `list_dives` tool: list the user's dives and ask which one to feature on the
